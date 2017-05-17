@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Fourth Employees Task</h1>
+</div>
+
+<div class="row">
+    <div class="container">
+        <div class="row">
+            <div class='col-sm-3 col-md-3'>
+                @using (Html.BeginForm("Subscribe", "Home", FormMethod.Post))
+                {
+                    <div class="form-group">
+                        <div class='input-group date' id='datetimepicker1'>
+                            <input type='text' class="form-control" name="date" required />
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8" id="employees-data-table">
+
+    </div>
+</div>
+
+
+@section scripts{
+    <script type="text/javascript">
+
+        $(function () {
+            $('#datetimepicker1').datetimepicker();
+        });
+    </script>
+}
