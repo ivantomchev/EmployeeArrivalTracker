@@ -24,6 +24,11 @@
                 var responseModel = JsonConvert.DeserializeObject<IEnumerable<EmployeeDTO>>(response.Content);
                 var viewModel = responseModel.Select(x => EmployeeIndexViewModel.MapFromEntity(x));
 
+                if (Request.IsAjaxRequest())
+                {
+                    return PartialView("_EmployeesDataTablePartial", viewModel);
+                }
+
                 return View(viewModel);
             }
 
