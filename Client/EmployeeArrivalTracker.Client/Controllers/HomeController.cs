@@ -1,13 +1,9 @@
-﻿namespace EmployeeArrivalTracker.Client.Controllers
+﻿namespace EmployeeArrivalTracker.Client.Controllers 
 {
+    using Models.ViewModels;
     using RestSharp;
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Linq;
     using System.Net;
     using System.Threading.Tasks;
-    using System.Web;
     using System.Web.Mvc;
 
     public class HomeController : Controller
@@ -31,12 +27,6 @@
             }
 
             return RedirectToAction("Index");
-        }
-
-        public class SubscribeInpuModel
-        {
-            [Required]
-            public DateTime Date { get; set; }
         }
     }
 }

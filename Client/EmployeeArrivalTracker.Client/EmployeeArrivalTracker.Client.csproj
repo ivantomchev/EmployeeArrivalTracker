@@ -154,6 +154,7 @@
     </Compile>
     <Compile Include="Models\DTO\EmployeeDTO.cs" />
     <Compile Include="Models\ViewModels\EmployeeIndexViewModel.cs" />
+    <Compile Include="Models\ViewModels\SubscribeInpuModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
