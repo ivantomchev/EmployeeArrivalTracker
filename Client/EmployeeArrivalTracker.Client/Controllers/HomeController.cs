@@ -30,7 +30,7 @@
                 return RedirectToAction("Index", "Employees");
             }
 
-            return Content("Kur");
+            return RedirectToAction("Index");
         }
 
         public class SubscribeInpuModel
