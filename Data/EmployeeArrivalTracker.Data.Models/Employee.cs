@@ -27,6 +27,7 @@
 
         public string Role { get; set; }
 
+        [Index]
         public DateTime? ArrivalDate { get; set; }
 
         public int? ManagerId { get; set; }
